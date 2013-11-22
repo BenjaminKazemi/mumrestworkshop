@@ -11,5 +11,13 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
+# Factories
+GET     /factories                              Factories.list
+POST    /factories                              Factories.create
+PUT     /factories/{id}                         Factories.update
+DELETE  /factories/{id}                         Factories.delete
+
+
+
 # Catch all
-*       /{controller}/{action}                  {controller}.{action}
+#*       /{controller}/{action}                  {controller}.{action}
