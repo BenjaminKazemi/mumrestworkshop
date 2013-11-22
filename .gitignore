@@ -9,3 +9,7 @@ eclipse
 
 tmp
 lib
+db
+logs
+
+*.pid
