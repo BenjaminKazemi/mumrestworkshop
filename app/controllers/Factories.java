@@ -3,7 +3,6 @@ package controllers;
 import com.google.gson.Gson;
 import models.Factory;
 import org.apache.commons.io.IOUtils;
-import play.mvc.Controller;
 
 import java.util.List;
 
@@ -15,7 +14,7 @@ public class Factories extends GenericController {
     }
 
     public static void create() throws Exception {
-        Factory factory = new Gson().fromJson(IOUtils.toString(request.body), Factory.class );
+        Factory factory = new Gson().fromJson(IOUtils.toString(request.body), Factory.class);
         factory.save();
 
         renderJSON( new Gson().toJson(factory) );
@@ -36,7 +35,7 @@ public class Factories extends GenericController {
         if( count == 1 ) {
             ok();
         } else {
-            notFound( "Factory.id = " + id );
+            notFound("Factory.id = " + id);
         }
     }
 

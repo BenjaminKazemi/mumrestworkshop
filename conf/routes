@@ -17,6 +17,7 @@ POST    /factories                              Factories.create
 PUT     /factories/{id}                         Factories.update
 DELETE  /factories/{id}                         Factories.delete
 
+POST    /factories/{id}/products                Products.create
 
 
 # Catch all
